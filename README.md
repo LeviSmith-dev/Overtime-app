@@ -1,13 +1,11 @@
- ## Overtime App
+# Overtime App
 
-## Key requirements: company needs documentation that salaried employees did or did not get overtime each week.
+## Key requirement: company needs documentation that salaried employees did or did not get overtime each week
 
-## Models:
-
+## Models
 - Post -> date:date rationale:text
-X User -> Devise
-X AdminUser -> STI
-
+x User -> Devise
+x AdminUser -> STI
 
 ## Features:
 - Approval Workflow
@@ -17,8 +15,7 @@ X AdminUser -> STI
 - Needs to be documented if employee did not log overtime
 
 ## UI:
+- Bootstrap -> formatting
 
-- Bootstrap
-
-## Refactor TODOs
-- refactor user association integration in post spec
+## Refactor TODOS:
+- Refactor user association integration test in post_spec
