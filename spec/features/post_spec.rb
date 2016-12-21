@@ -9,7 +9,7 @@ require 'rails_helper'
 
     it 'has a title of Posts' do
       visit posts_path
-      expect(page).to have_content(/Posts/)
+      expect(page).to have_content("#{@posts}")
     end
    end
 
