@@ -19,3 +19,6 @@ X AdminUser -> STI
 ## UI:
 
 - Bootstrap
+
+## Refactor TODOs
+- refactor user association integration in post spec
