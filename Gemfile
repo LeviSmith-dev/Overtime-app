@@ -15,6 +15,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'factory_girl_rails', '~> 4.8'
 end
 
 group :development do
@@ -24,4 +25,4 @@ end
 
 gem 'devise', '~> 4.2'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-gem 'factory_girl_rails', '~> 4.8'
+
