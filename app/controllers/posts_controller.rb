@@ -25,8 +25,8 @@ class PostsController < ApplicationController
 	end
 
 	def update
-		authorize @post
-		
+	authorize @post
+
 		if @post.update(post_params)
 			redirect_to @post, notice: 'Your post was edited successfully'
 		else
@@ -35,6 +35,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
+		authorize @post
 	end
 
 	def destroy

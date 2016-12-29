@@ -1,10 +1,10 @@
 <%= form_for @post, class: "form-horizontal" do |f| %>
 
-<% if @post.errors.any? %>
-	<% @post.errors.full_messages.each do |error| %>
-   <%= js add_gritter(error, title: "Overtime App Notification", sticky: false) %>
-  <% end %>
-<% end %>
+	<% if @post.errors.any? %>
+		<% @post.errors.full_messages.each do |error| %>
+			<%= js add_gritter(error, title: "Overtime App Notification", sticky: false) %>
+		<% end %>
+	<% end %>
 
   <div class="form-group">
   	<%= f.label :date, class: "col-sm-2 control-label" %>	
@@ -16,12 +16,8 @@
   	<%= f.text_area :rationale, class: "form-control" %>	
   </div>
 
-  <%= render partial: 'status', locals: { f: f } if current_user.type == 'AdminUser' %>
-
-  
+  <%= render partial: 'status', locals: {f: f} if current_user.type == "AdminUser" %>
   
   <%= f.submit 'Save', class: 'btn btn-primary btn-block' %>
 
 <% end %>
-
-

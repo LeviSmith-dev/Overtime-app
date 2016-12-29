@@ -1,6 +1,7 @@
 <div class='logo'>
 	<h1>Time Tracker</h1>
 </div>
+
 <!-- TODO -->
 <% if current_user %>
 <ul class="custom-nav nav nav-tabs">
@@ -17,8 +18,8 @@
 		 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Options<strong class="caret"></strong></a>
 		<ul class="dropdown-menu">
 
-			<!-- TODO -->
-			<% if current_user.try(:type) == 'AdminUser' %>
+		<!-- TODO -->
+		<% if current_user.try(:type) == 'AdminUser' %>
 			<li>
 				<%= link_to "Admin Dashboard", admin_root_path %>
 			</li>
@@ -33,5 +34,4 @@
 	</li>
 </ul>
 <% end %>
-
 <!-- TODO -->
