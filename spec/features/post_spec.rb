@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'navigate' do
-  let(:user) {FactoryGirl.create(:user)}
+  let(:user) { FactoryGirl.create(:user) }
 
   let(:post) do
     Post.create(date: Date.today, rationale: "Rationale", user_id: user.id, overtime_request: 3.5)
@@ -32,8 +32,7 @@ describe 'navigate' do
     end
 
     it 'has a scope so that only post creators can see their posts' do
-      other_user = User.create(first_name: 'Non',last_name: 'Authorized', email: 'nonauth@example.com', password: "asdfasdf", password_confirmation: "asdfasdf" )
-
+      other_user = User.create(first_name: 'Non', last_name: 'Authorized', email: "nonauth@example.com", password: "asdfasdf", password_confirmation: "asdfasdf")
       post_from_other_user = Post.create(date: Date.today, rationale: "This post shouldn't be seen", user_id: other_user.id, overtime_request: 3.5)
 
       visit posts_path
@@ -58,7 +57,7 @@ describe 'navigate' do
       delete_user = FactoryGirl.create(:user)
       login_as(delete_user, :scope => :user)
 
-      post_to_delete = Post.create(date: Date.today, rationale: 'aasdfasdf', user_id: delete_user.id, overtime_request: 3.5)
+      post_to_delete = Post.create(date: Date.today, rationale: 'asdf', user_id: delete_user.id, overtime_request: 3.5)
 
       visit posts_path
 
@@ -105,7 +104,7 @@ describe 'navigate' do
       expect(page).to have_content("Edited content")
     end
 
-    it 'cannot be edited by a non authorized user' do 
+    it 'cannot be edited by a non authorized user' do
       logout(:user)
       non_authorized_user = FactoryGirl.create(:non_authorized_user)
       login_as(non_authorized_user, :scope => :user)
