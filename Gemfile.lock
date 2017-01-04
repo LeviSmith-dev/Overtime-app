@@ -249,6 +249,7 @@ DEPENDENCIES
   gritter (= 1.2.0)
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari (~> 0.17.0)
   pg (~> 0.15)
   puma (~> 3.4)
   pundit (~> 1.1)
@@ -261,3 +262,6 @@ DEPENDENCIES
   twilio-ruby (~> 4.11, >= 4.11.1)
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+
+BUNDLED WITH
+   1.13.6
