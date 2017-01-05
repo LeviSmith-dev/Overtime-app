@@ -10,7 +10,7 @@
 
 ## Features:
 - x Approval Workflow
-- SMS Sending -> link to approval or overtime input
+- x SMS Sending -> link to approval or overtime input
 - Email summary to managers for approval
 - x Needs to be documented if employee did not log overtime
 
