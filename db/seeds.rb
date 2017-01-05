@@ -1,3 +1,12 @@
+ @user = User.create(email: "test@test.com",
+                    password: "asdfasdf",
+                    password_confirmation: "asdfasdf",
+                    first_name: "Jon",
+                    last_name: "Snow",
+                    phone: "3852147526")
+
+puts "1 User created"
+
 AdminUser.create(email: "admin@test.com",
                   password: "asdfasdf",
                   password_confirmation: "asdfasdf",
@@ -7,14 +16,6 @@ AdminUser.create(email: "admin@test.com",
 
 puts "1 Admin User created"
 
- @user = User.create(email: "test@test.com",
-                    password: "asdfasdf",
-                    password_confirmation: "asdfasdf",
-                    first_name: "Jon",
-                    last_name: "Snow",
-                    phone: "3852147526")
-
-puts "1 User created"
 
 
 AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 6.days))
